@@ -9,7 +9,7 @@ A beautiful coming soon landing page for Colle dell'Ara Bed & Breakfast, built w
 - **Email Subscription**: Newsletter signup form for early access notifications
 - **Smooth Animations**: Floating animations and hover effects
 - **Contact Information**: Easy-to-find contact details and social media links
-- **Italian Language**: Content in Italian for the target audience
+- **English Language**: Content in English for international audience
 
 ## 🎨 Design Highlights
 
@@ -75,20 +75,30 @@ To connect the email form to your backend or email service (like Mailchimp, Send
 
 ## 🌐 Deployment
 
-This static website can be deployed to any hosting service:
+### Deploy to Vercel
 
-- **Vercel**: Connect your Git repository
+**Method 1: Using npx (no installation required)**
 
-### Quick Deploy Options
-
-#### Vercel
 ```bash
-# Install Vercel CLI
-npm install -g vercel
+# Deploy to Vercel without installing anything globally
+npx vercel
 
-# Deploy
-vercel --prod
+# For production deployment
+npx vercel --prod
 ```
+
+**Method 2: Via Vercel Dashboard (Easiest)**
+
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with GitHub
+3. Click "New Project"
+4. Import your `colledellara-website` repository
+5. Click "Deploy" (it auto-detects static sites)
+6. Your site will be live in seconds! 🚀
+
+### Custom Domain
+
+After deployment, you can add a custom domain (e.g., `colledellara.com`) through the Vercel dashboard.
 
 ## 📄 License
 

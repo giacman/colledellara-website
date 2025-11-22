@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colle dell'Ara - Coming Soon</title>
+    <meta name="description" content="Colle dell'Ara - A new Bed & Breakfast is about to open its doors. Sign up to receive updates.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-pattern {
+            background-color: #1a202c;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="hero-pattern">
+    
+    <!-- Main Container -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl w-full space-y-8">
+            
+            <!-- Logo/Brand Section -->
+            <div class="text-center float-animation">
+                <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-xl mb-6">
+                    <i class="fas fa-mountain text-5xl text-indigo-600"></i>
+                </div>
+                <h1 class="heading-font text-5xl md:text-7xl font-bold text-white mb-4">
+                    Colle dell'Ara
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-2">
+                    Bed & Breakfast
+                </p>
+            </div>
+
+            <!-- Main Content Card -->
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="p-8 md:p-12">
+                    
+                    <!-- Coming Soon Badge -->
+                    <div class="text-center mb-8">
+                        <span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-6 py-2 rounded-full">
+                            <i class="far fa-clock mr-2"></i>Coming Soon
+                        </span>
+                    </div>
+
+                    <!-- Main Message -->
+                    <div class="text-center mb-12">
+                        <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                            A unique experience awaits you
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                            We're preparing something special for you. Our Bed & Breakfast nestled in nature 
+                            is about to open its doors. Leave us your email to be among the first to discover 
+                            when we're ready to welcome you.
+                        </p>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-12">
+                        <div class="feature-card bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-500 text-white mb-4">
+                                <i class="fas fa-tree text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Immersed in Nature</h3>
+                            <p class="text-gray-600 text-sm">Surrounded by breathtaking landscapes and tranquility</p>
+                        </div>
+                        
+                        <div class="feature-card bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-500 text-white mb-4">
+                                <i class="fas fa-heart text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Warm Hospitality</h3>
+                            <p class="text-gray-600 text-sm">A family atmosphere where you feel at home</p>
+                        </div>
+                        
+                        <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500 text-white mb-4">
+                                <i class="fas fa-utensils text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Authentic Breakfast</h3>
+                            <p class="text-gray-600 text-sm">Local products and traditional recipes</p>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Form -->
+                    <div class="max-w-xl mx-auto">
+                        <form id="newsletter-form" class="space-y-4">
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <input 
+                                    type="email" 
+                                    id="email-input"
+                                    placeholder="Your email address" 
+                                    required
+                                    class="flex-1 px-6 py-4 border-2 border-gray-300 rounded-full focus:ring-4 focus:ring-indigo-300 focus:border-indigo-500 outline-none transition text-gray-900"
+                                >
+                                <button 
+                                    type="submit"
+                                    class="btn-gradient px-8 py-4 text-white font-semibold rounded-full shadow-lg">
+                                    <i class="fas fa-bell mr-2"></i>Notify Me
+                                </button>
+                            </div>
+                            <p class="text-sm text-gray-500 text-center">
+                                <i class="fas fa-lock mr-1"></i>Your data is safe with us
+                            </p>
+                        </form>
+                        <div id="form-message" class="mt-4 text-center hidden">
+                            <p class="text-green-600 font-semibold">
+                                <i class="fas fa-check-circle mr-2"></i>Thank you! We'll contact you soon.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Section -->
+                <div class="gradient-overlay px-8 py-10 md:px-12">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-white mb-6">
+                            Want to know more?
+                        </h3>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
+                            <a href="mailto:info@colledellara.it" class="flex items-center space-x-2 hover:text-yellow-300 transition">
+                                <i class="fas fa-envelope text-xl"></i>
+                                <span>info@colledellara.it</span>
+                            </a>
+                            <a href="tel:+39123456789" class="flex items-center space-x-2 hover:text-yellow-300 transition">
+                                <i class="fas fa-phone text-xl"></i>
+                                <span>+39 123 456 789</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="mt-8 flex justify-center space-x-4">
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-gray-400 text-sm pt-8">
+                <p>&copy; 2025 Colle dell'Ara. All rights reserved.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for form handling -->
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email-input').value;
+            const formMessage = document.getElementById('form-message');
+            
+            // Here you would typically send the email to your backend
+            // For now, we'll just show a success message
+            console.log('Email submitted:', email);
+            
+            // Show success message
+            formMessage.classList.remove('hidden');
+            
+            // Clear the form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
+

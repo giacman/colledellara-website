@@ -1,0 +1,19 @@
+{
+  "name": "colledellara-website",
+  "version": "1.0.0",
+  "description": "Coming soon website for Colle dell'Ara Bed & Breakfast",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "coming-soon",
+    "landing-page",
+    "bed-and-breakfast",
+    "tailwindcss"
+  ],
+  "author": "Colle dell'Ara",
+  "license": "MIT"
+}
+

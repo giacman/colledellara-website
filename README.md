@@ -62,16 +62,36 @@ Replace the `#` in social media links with actual URLs:
 <a href="https://wa.me/39123456789">...</a>
 ```
 
-### Add Email Form Integration
+### Contact Form Configuration
 
-To connect the email form to your backend or email service (like Mailchimp, SendGrid, etc.), update the JavaScript in the form submission handler.
+The contact form uses **[Web3Forms](https://web3forms.com)** to send emails without a backend server.
+
+**Current Configuration:**
+- Emails sent to: `lucioni.a@googlemail.com`
+- Access Key: `b5f7b9e1-ca7d-4e5b-b188-3ea676cdba74`
+- Free tier: 250 submissions/month
+- No activation required, works immediately
+
+**To change the email address:**
+1. Go to [web3forms.com](https://web3forms.com)
+2. Enter your new email address
+3. Get a new Access Key
+4. Update the `access_key` value in `index.html`:
+   ```html
+   <input type="hidden" name="access_key" value="YOUR_NEW_KEY_HERE">
+   ```
+
+**To view submissions:**
+- Check your email inbox
+- Or login to [Web3Forms Dashboard](https://web3forms.com/dashboard) to see all submissions
 
 ## 📦 Technologies Used
 
 - **Tailwind CSS** (via CDN) - Utility-first CSS framework
 - **Font Awesome 6** - Icon library
-- **Google Fonts** - Playfair Display & Poppins fonts
-- **Vanilla JavaScript** - For form handling
+- **Google Fonts** - Lato font family
+- **Web3Forms** - Contact form email delivery (free, no backend required)
+- **Vanilla JavaScript** - For smooth scroll navigation
 
 ## 🌐 Deployment
 

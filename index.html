@@ -101,15 +101,11 @@
             padding: 60px 20px;
         }
         
-        .hero h1 {
-            font-family: 'Brush Script MT', 'Gellatio', cursive;
-            font-size: 90px;
-            font-weight: normal;
-            line-height: 1;
-            margin-bottom: 10px;
-            color: var(--text-gray);
-            transform: rotate(-10deg);
-            display: inline-block;
+        .hero-logo {
+            width: 400px;
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 20px;
         }
         
         .hero .subtitle {
@@ -246,8 +242,9 @@
             margin-bottom: 40px;
         }
         
-        footer .logo-footer img {
-            width: 200px;
+        footer .footer-logo-text {
+            width: 300px;
+            max-width: 80%;
             height: auto;
         }
         
@@ -276,10 +273,19 @@
             margin: 5px 0;
         }
         
+        footer .tocc-logo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            max-width: 40%;
+            height: auto;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 60px;
+            .hero-logo {
+                width: 300px;
             }
             
             .hero .tagline {
@@ -297,11 +303,21 @@
             .nav-menu a {
                 font-size: 12px;
             }
+            
+            footer .tocc-logo {
+                position: static;
+                width: 250px;
+                max-width: 80%;
+                margin-top: 30px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 45px;
+            .hero-logo {
+                width: 250px;
             }
             
             .opening-soon h2 {
@@ -343,8 +359,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Colle<br>Dell'Ara</h1>
-            <p class="subtitle">Guesthouse</p>
+            <img src="Colle_Dell_Ara_Logo_words_only.png" alt="Colle Dell'Ara Guesthouse" class="hero-logo">
             <p class="tagline">Where time slows and life feels simple</p>
             
             <div class="divider"></div>
@@ -400,15 +415,13 @@
     <footer>
         <div class="container">
             <div class="logo-footer">
-                <h1 style="font-family: 'Brush Script MT', 'Gellatio', cursive; font-size: 60px; font-weight: normal; line-height: 1; margin-bottom: 5px; transform: rotate(-10deg); display: inline-block;">Colle<br>Dell'Ara</h1>
-                <p style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase;">Guesthouse</p>
+                <img src="Colle_Dell_Ara_Logo.png" alt="Colle Dell'Ara Guesthouse" class="footer-logo-text">
             </div>
-            
-            <img src="Colle_dell_Ara_Logo_village.png" alt="Colle Dell'Ara" class="footer-logo-simple">
             
             <div class="copyright">
                 <p>&copy; 2025 - Colle Dell'Ara Guesthouse Labro</p>
                 <p>Azienda Agricola Blasi Isabella · P.IVA 01210490577 · Instagram</p>
+                <img src="Logo TOCC.png" alt="Finanziato dall'Unione europea - NextGenerationEU - Ministero della Cultura" class="tocc-logo">
             </div>
         </div>
     </footer>

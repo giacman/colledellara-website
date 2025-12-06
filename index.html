@@ -159,6 +159,43 @@
         }
         
         /* Opening Soon Section */
+        /* Dove Siamo Section */
+        .dove-siamo {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--cream);
+        }
+        
+        .dove-siamo h2 {
+            font-family: 'Lora', serif;
+            font-size: 40px;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #6f8474;
+        }
+        
+        .dove-siamo .address {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+        
+        .map-container {
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--light-green);
+            height: 400px;
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        
         .opening-soon {
             text-align: center;
             padding: 60px 20px 30px;
@@ -359,7 +396,7 @@
                     <img src="Colle_dell_Ara_Logo_village.png" alt="Colle Dell'Ara Logo" class="logo">
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#dove-siamo">Dove Siamo</a></li>
                     <li><a href="#enquiry">Contatti</a></li>
                     <li><a href="#social">Social</a></li>
                 </ul>
@@ -391,6 +428,18 @@
     <!-- Village Image -->
     <section class="village-image">
         <img src="Colle_Dell_Ara__static_website_homepage_mockup.jpg" alt="Borgo medievale di Labro" id="village-photo">
+    </section>
+
+    <!-- Dove Siamo Section -->
+    <section class="dove-siamo" id="dove-siamo">
+        <div class="container">
+            <h2>Colle Dell'Ara Guesthouse</h2>
+            <p class="address">Via del Monte 25, Labro (RI) 02010</p>
+            
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
     </section>
 
     <!-- Opening Soon Section -->
@@ -437,6 +486,103 @@
         </div>
     </footer>
 
+    <!-- Google Maps JavaScript API -->
+    <script>
+        function initMap() {
+            // Map location (Labro, Via del Monte 25)
+            const labro = { lat: 42.5266, lng: 12.7997 };
+            
+            // Custom map styles - minimal green theme with #b9d1be
+            const mapStyles = [
+                // Base paesaggio verde chiaro
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#ceded2"}]
+                },
+                // Strade bianche/crema per contrasto
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f5f3e8"}]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#f5f3e8"}]
+                },
+                // Nascondi etichette strade
+                {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [{"visibility": "off"}]
+                },
+                // Acqua verde acqua
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#9dbfa4"}]
+                },
+                // Nascondi tutti i POI (ristoranti, negozi, etc)
+                {
+                    "featureType": "poi",
+                    "stylers": [{"visibility": "off"}]
+                },
+                {
+                    "featureType": "transit",
+                    "stylers": [{"visibility": "off"}]
+                },
+                // Testo località in grigio
+                {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#545854"}]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"color": "#f5f3e8"}, {"weight": 3}]
+                },
+                // Confini amministrativi sottili
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#d0dfd3"}, {"weight": 0.5}]
+                }
+            ];
+            
+            // Create map
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: labro,
+                zoom: 14,
+                styles: mapStyles,
+                disableDefaultUI: false,
+                zoomControl: true,
+                mapTypeControl: false,
+                streetViewControl: false,
+                fullscreenControl: false
+            });
+            
+            // Add marker
+            const marker = new google.maps.Marker({
+                position: labro,
+                map: map,
+                title: 'Colle Dell\'Ara Guesthouse'
+            });
+            
+            // Add info window
+            const infoWindow = new google.maps.InfoWindow({
+                content: '<div style="padding: 10px; font-family: Lato, sans-serif;"><b>Colle Dell\'Ara Guesthouse</b><br>Via del Monte 25<br>Labro (RI) 02010</div>'
+            });
+            
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg0fanQ5jB5TXMIz0fpZr1LAeb6S9_oto&callback=initMap" async defer></script>
+    
     <script>
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
